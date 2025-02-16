@@ -6,7 +6,7 @@ import requests
 import json
 
 st.set_page_config(
-    page_title="오류중학교 정보화 기기 수리 요청 대장",
+    page_title="000학교 정보화 기기 수리 요청 대장",
     page_icon="🧊",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -38,7 +38,7 @@ token_generate()
 
 headers = {"Authorization": f"Bearer {st.session_state.access_token}"}
 
-r = requests.get('https://graph.microsoft.com/v1.0/groups/e49eee20-ef81-4f29-93aa-951daa958fca/sites/root/lists/7cbc9d8e-f383-46c8-a205-22ac00f3d842/items?' +
+r = requests.get('https://graph.microsoft.com/v1.0/groups/9e654393-9cb6-45f4-a01c-53b926969e5f/sites/root/lists/c5a7b0ad-4544-4a3a-8c24-0c38aaf665db/items?' +
                  'expand=' +
                  'fields(select=Created,Title,_x314e__x314e_,_xc218__xb9ac__xc810__xac80__xbb,_xace0__xc7a5__xc0c1__xd0dc__x00,_xcc98__xb9ac__xc0c1__xd0dc_,_xbe44__xace0_)', headers=headers)
 
